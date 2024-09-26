@@ -1,6 +1,8 @@
-import addList from './createElem.js';
+// import addList from './createElem.js';
 
-import adduList from './createElem.js';
+import { addExperBlock, addList, addTextExper, addUlist, addSkillsblock, createElem1 } from './createElem.js';
+
+// import createElem1  from './createElem.js';
 
 document.body.onload = wSiteCreator;
 
@@ -58,13 +60,13 @@ const experText = document.createElement("h3");
 
 const experAllBlock = document.createElement("div")
 
-const experTitleBlock = document.createElement("div");
+
 
 const experTitle = document.createElement("div");
 
 const experTime = document.createElement("div");
 
-const experDescrBlock = document.createElement("div");
+
 
 const experDescr = document.createElement("p");
 
@@ -137,7 +139,8 @@ const experDescr = document.createElement("p");
     listBlock.style.height = "30vh";
     listBlock.style.display = "flex";
     listBlock.style.justifyContent= "space-around";
-    listBlock.style.fontFamily = "san-serif";
+    listBlock.style.fontFamily = "Roboto";
+    listBlock.style.alignItems = "center";
 
     // liList.style.margin = "2em";
     // liList2.style.margin = "2em";
@@ -164,6 +167,7 @@ const experDescr = document.createElement("p");
     rightlist.style.border = "solid, 1px , black";
     rightlist.style.marginLeft = "0vh";
     rightlist.style.color = "grey"
+   
 
     aboutMe.style.border = "solid, 1px, black";
 
@@ -183,12 +187,12 @@ const experDescr = document.createElement("p");
     experText.style.marginTop = "10vh";
     experText.style.fontSize = "2vw";
 
-    experAllBlock.style.display = "flex";
-    // experBlock.style.flexDirection = "column";
+
 
 
     experTitle.style.margin = "1em";
     experDescr.style.margin = "1em";
+    experDescr.style.fontFamily = "cursive"
    
     experTime.style.margin = "1em";
     
@@ -197,51 +201,69 @@ const experDescr = document.createElement("p");
 
   }
 
-// function addList(content){
-
-//     var liList = document.createElement('li');
-//     liList.textContent = content;
-
-//     return liList;
-// }
-
-function addUlist(className){
 
   
-  var ulList = document.createElement('ul');
 
-  ulList.classList.add(className);
+  // function addExperBlock(titleClassName, timeClassName, descrClassName){
+  //   const experAllBlock = createElem1("div", "experAllBlock", "Gg" );
 
-  return ulList;
-}
+  //   const experTitleBlock = createElem1("div", "titleBlock",);
+
+  //   experAllBlock.appendChild(experTitleBlock);
+
+  //   const experTitle = createElem1("div", titleClassName);
+
+  //   experTitleBlock.appendChild(experTitle);
+
+  //   const experTime = createElem1("div", timeClassName);
+
+  //   experTitleBlock.appendChild(experTime);
+
+  //   const experDescrBlock = createElem1("div", "DescrBlock");
+
+  //   experAllBlock.appendChild(experDescrBlock);
+
+
+  //   const experDescr = createElem1("div", descrClassName);
+
+  //   experDescrBlock.appendChild(experDescr);
+
+
+  //   return experAllBlock;
+    
+
+  // }
+
+  // const experB22 =  addExperBlock();
 
 
 
-function addExperBlock(titleClassName, timeClassName,descrClassName) {
+// function addExperBlock(titleClassName, timeClassName,descrClassName) {
 
    
-    experAllBlock.appendChild(experTitleBlock);
-    experTitleBlock.appendChild(experTitle);
-    experTitle.classList.add(titleClassName);
-    experTitleBlock.appendChild(experTime);
-    experTime.classList.add(timeClassName);
-    experAllBlock.appendChild(experDescrBlock);
-    experDescrBlock.appendChild(experDescr);
-    experDescr.classList.add(descrClassName);
+//     experAllBlock1.appendChild(experTitleBlock);
+//     experTitleBlock.appendChild(experTitle);
+//     experTitle.classList.add(titleClassName);
+//     experTitleBlock.appendChild(experTime);
+//     experTime.classList.add(timeClassName);
+//     experAllBlock.appendChild(experDescrBlock);
+//     experDescrBlock.appendChild(experDescr);
+//     experDescr.classList.add(descrClassName);
 
-    return experAllBlock;
-}
-function addTextExper(buildBlock, titleClassName, timeClassName, descrClassName, content) {
-  
-  const title = buildBlock.querySelector(`.${titleClassName}`);
-  const time = buildBlock.querySelector(`.${timeClassName}`);
-  const descr = buildBlock.querySelector(`.${descrClassName}`);
-  
-  title.textContent = content.title;
-  time.textContent = content.time;
-  descr.textContent = content.descr;
+//     return experAllBlock;
+// }
 
-}
+// function addTextExper(buildBlock, titleClassName, timeClassName, descrClassName, content) {
+  
+//   const title = buildBlock.querySelector(`.${titleClassName}`);
+//   const time = buildBlock.querySelector(`.${timeClassName}`);
+//   const descr = buildBlock.querySelector(`.${descrClassName}`);
+  
+//   title.textContent = content.title;
+//   time.textContent = content.time;
+//   descr.textContent = content.descr;
+
+// }
 
 
 function addElement() {
@@ -272,7 +294,7 @@ function addElement() {
     leftBlock.appendChild(listBlock);
 
     listBlock.appendChild(leftlist);
-    leftlist.appendChild(uList);
+    // leftlist.appendChild(uList);
   
 
     listBlock.appendChild(rightlist);
@@ -294,24 +316,20 @@ function addElement() {
     aboutMe.appendChild(headingText);
     aboutMe.appendChild(textMy);
 
+
     rightBlock.appendChild(experBlock);
     experBlock.appendChild(experText);
-    // experBlock.appendChild(experAllBlock);
-    // experBlock.appendChild(experAllBlock);
-    // experAllBlock.appendChild(experTitleBlock);
-    // experTitleBlock.appendChild(experTitle);
-    // experTitleBlock.appendChild(experTime);
-    // experAllBlock.appendChild(experDescrBlock);
-    // experDescrBlock.appendChild(experDescr);
+
+    const addSB = addSkillsblock();
+
+    // rightBlock.appendChild(addSB);
 
 
-
-
+  
     headingText.innerHTML += "About me";
 
     textMy.innerHTML += "I am a junior Software Engineer and Web Developer, currently studying Software Engineering at Cardiff Metropolitan University. In addition to my studies, I work as a bartender at Cardiff's Principality Stadium. Through balancing work and study, I am continuously developing a range of valuable skills, including team leadership, communication, digital skills, flexibility, adaptability, time management, and problem-solving, while also enhancing my English language skills.";
 
-   
 
     photo.src = "./images/myPhoto.jpg";
 
@@ -319,55 +337,73 @@ function addElement() {
     experText.innerHTML += "Experience"
 
     
-    var experBlock1 = addExperBlock('title-1', 'time-1','descr-2'); 
+    const experBlock1 = addExperBlock('title-1', 'time-1','descr-2'); 
     experBlock.appendChild(experBlock1); 
 
     
-  
     addTextExper(experBlock1, 'title-1', 'time-1', 'descr-2', {
-        title: "Programer",
-        time: "july - today",
-        descr: "something"
+        title: "Cartdiff Metropolitan University",
+        time: "Sep 2023 - Present",
+        descr: "I am currently studying Software Engineering and actively developing various applications to improve my coding, problem-solving, and soft skills. So far, I have worked on projects including a chatbot in Java, a network anomaly detection app using CSV data from Wireshark, a voice assistant for calendar management built with Python and Google API, and a caravan rental website. In the website project, I developed the login and registration functionality for both front-end and back-end, and helped integrate my team's work to create a fully functional platform. These experiences have strengthened my technical and teamwork abilities."
     });
 
     
+    const experBlock2 = addExperBlock('title-2', 'time-2', 'descr2'); 
+    experBlock.appendChild(experBlock2);
 
-
-
-    var experBlock2 = addExperBlock('title-2', 'time-2', 'descr2'); 
-    experBlock.appendChild(experBlock2); 
-    experBlock.appendChild(experBlock2.cloneNode(true));
 
     addTextExper(experBlock2, 'title-2', 'time-2', 'descr2', {
-      title: "Programmer",
-      time: "july - tomorow",
-      descr: "gg"
-  });
+      title: "Compass Group",
+      time: "Apr 2024 - Present",
+      descr: "Part-time job as a bartender and retail assistant at Cardiff Principality Stadium, where I gained valuable experience in customer service while developing and enhancing key soft skills such as self-confidence, English language proficiency, respectfulness, and effective teamwork. These skills were honed in a fast-paced environment, interacting with a diverse range of customers and coordinating with team members to ensure smooth operations during large events. "
+    });
+
+    const experBlock3 = addExperBlock('title-3', 'time-3', 'descr3'); 
+    experBlock.appendChild(experBlock3);
+
+    const hyperLink = document.createElement("a");
+
+    experBlock.appendChild(hyperLink);
+
+    
+    addTextExper(experBlock3, 'title-3', 'time-3', 'descr3', {
+      
+
+
+      title: "Personal projects",
+      time: "Present",
+      descr: "I have worked on several projects to explore different programming languages and enhance my hard skills. These include an online business card for a photographer (HTML, CSS, JavaScript), a 2D game similar to Mario (Java), a ReactJS function for selecting icons from the MUI API, and this CV created entirely in JavaScript. All projects are available on my ",
+      hyperLink: "Github.",
+      
+    });
+
+    const experBlock4 = addExperBlock('title-4', 'time-4', 'descr4'); 
+    experBlock.appendChild(experBlock4);
+
+
+    addTextExper(experBlock4, 'title-4', 'time-4', 'descr4', {
+      title: "Cathays High School",
+      time: "May 2022 - Jul 2023",
+      descr: "Delivered professional support while demonstrating leadership qualities, managing both employees and students to ensure timely and efficient service. This experience enhanced my leadership abilities, improved my English skills, and strengthened my teamwork and workforce management skills, as well as my understanding of what it takes to be an effective leader.",
+    });
+
+    // const add = addList();
+
+    const addUl1 = addUlist();
+
+    leftlist.appendChild(addUl1);
+
+
+    addUl1.appendChild(addList("Mail"));
+    
+    addUl1.appendChild(addList("Github"));
+   
+    addUl1.appendChild(addList("LinkedIn"));
 
    
 
     
-    
-    
-
-
-
-
-
-  // const obj = {
-  //   'obj1': 1,
-  //   'obj2': 2,
-  // }
-
-    uList.appendChild(addList("Mail"));
-    // uList.appendChild(liList.cloneNode(true));
-    uList.appendChild(addList("Github"));
-    // uList.appendChild(liList.cloneNode(true));
-    uList.appendChild(addList("LinkedIn"));
-
-
-    
-    const addUl = addUlist("ulList2");
+    const addUl = addUlist();
 
     rightlist.appendChild(addUl);
 
@@ -377,16 +413,15 @@ function addElement() {
 
     addUl.appendChild(addList("LinkedI2n"));
 
-    
-    // const footer = createElem('div', 'footer-elem', 'Gazoz')
+    addUl1.style.listStyleType = "none";
 
-    // experBlock.appendChild(footer)
+    addUl.style.listStyleType = "none";
 
 
-  // and give it some content
+  
+
+
   const newContent = document.createTextNode("Hi there and greetings!");
-
-  // add the text node to the newly created div
 
   
 
