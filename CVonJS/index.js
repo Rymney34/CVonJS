@@ -1,6 +1,6 @@
 // import addList from './createElem.js';
 
-import { addExperBlock, addList, addTextExper, addUlist, addSkillsblock, createElem1 } from './createElem.js';
+import { addExperBlock, addList, addTextExper, addUlist, addSkillsblock, createElem1, addDl} from './createElem.js';
 
 // import createElem1  from './createElem.js';
 
@@ -61,7 +61,6 @@ const experText = document.createElement("h3");
 const experAllBlock = document.createElement("div")
 
 
-
 const experTitle = document.createElement("div");
 
 const experTime = document.createElement("div");
@@ -84,18 +83,18 @@ const experDescr = document.createElement("p");
   function addStyle(){
 
     document.body.style.margin = "0.2rem";
-    
+    // document.body.style.margin = "0.2rem";
 
 
 
     leftBlock.style.margin = "0";
     leftBlock.style.padding = "0";
-    leftBlock.style.height = "120vh";
+    // leftBlock.style.height = "120vh";
     leftBlock.style.width = "40vw";
     leftBlock.style.border = "solid, 1px , black";
     
 
-    rightBlock.style.height = "120vh";
+    // rightBlock.style.height = "120vh";
     rightBlock.style.width = "60vw";
     rightBlock.style.border = "solid, 1px , black";
 
@@ -106,23 +105,24 @@ const experDescr = document.createElement("p");
     nameBlock.style.width = "40vw";
     nameBlock.style.height = "40vh";
     nameBlock.style.display = "flex";
+    nameBlock.style.marginTop = "4vh";
 
     myNameBlock.style.border = "solid, 1px , black";
-    myNameBlock.style.width = "25vw";
+    myNameBlock.style.width = "22vw";
     myNameBlock.style.height = "40vh";
 
     Heading.style.textAlign = "center";
     Heading.style.marginTop = "16vh";
 
     animationPhoto.style.border = "solid, 1px , black";
-    animationPhoto.style.width = "15vw";
+    animationPhoto.style.width = "18vw";
     animationPhoto.style.height = "40vh";
     animationPhoto.style.backgroundColor = "red"
     animationPhoto.style.display = "flex";
     animationPhoto.style.justifyContent = "center";
 
     photoBlock.style.border = "solid, 1px , black";
-    photoBlock.style.width = "14vw";
+    photoBlock.style.width = "15vw";
     photoBlock.style.height = "21vh";
     photoBlock.style.borderRadius = "50%";
     photoBlock.style.marginTop = "10vh";
@@ -141,6 +141,7 @@ const experDescr = document.createElement("p");
     listBlock.style.justifyContent= "space-around";
     listBlock.style.fontFamily = "Roboto";
     listBlock.style.alignItems = "center";
+    listBlock.style.marginTop = "4vh";
 
     // liList.style.margin = "2em";
     // liList2.style.margin = "2em";
@@ -150,12 +151,8 @@ const experDescr = document.createElement("p");
 
     uList2.style.listStyleType = "none";
     uList2.style.padding = "0";
-    
-   
-  
-    
-  
-// photo.style.borderRadius = "50%"
+
+
 
     leftlist.style.fontSize = "2.5vh";
     leftlist.style.marginTop = "0vh";
@@ -172,6 +169,7 @@ const experDescr = document.createElement("p");
     aboutMe.style.border = "solid, 1px, black";
 
     aboutMe.style.height = "35vh";
+    aboutMe.style.marginTop = "5vh"
 
     textAbout.style.border = "solid, 1px, black";
     textAbout.style.marginTop = "1em";
@@ -184,12 +182,10 @@ const experDescr = document.createElement("p");
     headingText.style.marginLeft = "4vw";
 
     experText.style.margin = "1em";
-    experText.style.marginTop = "10vh";
+    experText.style.marginTop = "8vh";
     experText.style.fontSize = "2vw";
 
-
-
-
+    
     experTitle.style.margin = "1em";
     experDescr.style.margin = "1em";
     experDescr.style.fontFamily = "cursive"
@@ -201,69 +197,6 @@ const experDescr = document.createElement("p");
 
   }
 
-
-  
-
-  // function addExperBlock(titleClassName, timeClassName, descrClassName){
-  //   const experAllBlock = createElem1("div", "experAllBlock", "Gg" );
-
-  //   const experTitleBlock = createElem1("div", "titleBlock",);
-
-  //   experAllBlock.appendChild(experTitleBlock);
-
-  //   const experTitle = createElem1("div", titleClassName);
-
-  //   experTitleBlock.appendChild(experTitle);
-
-  //   const experTime = createElem1("div", timeClassName);
-
-  //   experTitleBlock.appendChild(experTime);
-
-  //   const experDescrBlock = createElem1("div", "DescrBlock");
-
-  //   experAllBlock.appendChild(experDescrBlock);
-
-
-  //   const experDescr = createElem1("div", descrClassName);
-
-  //   experDescrBlock.appendChild(experDescr);
-
-
-  //   return experAllBlock;
-    
-
-  // }
-
-  // const experB22 =  addExperBlock();
-
-
-
-// function addExperBlock(titleClassName, timeClassName,descrClassName) {
-
-   
-//     experAllBlock1.appendChild(experTitleBlock);
-//     experTitleBlock.appendChild(experTitle);
-//     experTitle.classList.add(titleClassName);
-//     experTitleBlock.appendChild(experTime);
-//     experTime.classList.add(timeClassName);
-//     experAllBlock.appendChild(experDescrBlock);
-//     experDescrBlock.appendChild(experDescr);
-//     experDescr.classList.add(descrClassName);
-
-//     return experAllBlock;
-// }
-
-// function addTextExper(buildBlock, titleClassName, timeClassName, descrClassName, content) {
-  
-//   const title = buildBlock.querySelector(`.${titleClassName}`);
-//   const time = buildBlock.querySelector(`.${timeClassName}`);
-//   const descr = buildBlock.querySelector(`.${descrClassName}`);
-  
-//   title.textContent = content.title;
-//   time.textContent = content.time;
-//   descr.textContent = content.descr;
-
-// }
 
 
 function addElement() {
@@ -320,7 +253,7 @@ function addElement() {
     rightBlock.appendChild(experBlock);
     experBlock.appendChild(experText);
 
-    const addSB = addSkillsblock();
+    
 
     // rightBlock.appendChild(addSB);
 
@@ -333,10 +266,30 @@ function addElement() {
 
     photo.src = "./images/myPhoto.jpg";
 
+    const languagesBlock = createElem1("div", "listlBlock");
+    leftBlock.appendChild(languagesBlock);
+
+    const titleBlock = createElem1("h3", "titlehH3", "Languges I speak");
+
+    languagesBlock.appendChild(titleBlock);
+
+    const languagesList = createElem1("div", "laguagesblock");
+    languagesBlock.appendChild(languagesList);
+
+
+    const dlist = createElem1("dl" , "dList");
+    languagesBlock.appendChild(dlist);
+
+
+      dlist.appendChild(addDl("first", "Second"));
+
+      dlist.appendChild(addDl("2", "Second2"));
+
+
 
     experText.innerHTML += "Experience"
 
-    
+   
     const experBlock1 = addExperBlock('title-1', 'time-1','descr-2'); 
     experBlock.appendChild(experBlock1); 
 
@@ -367,9 +320,7 @@ function addElement() {
 
     
     addTextExper(experBlock3, 'title-3', 'time-3', 'descr3', {
-      
-
-
+    
       title: "Personal projects",
       time: "Present",
       descr: "I have worked on several projects to explore different programming languages and enhance my hard skills. These include an online business card for a photographer (HTML, CSS, JavaScript), a 2D game similar to Mario (Java), a ReactJS function for selecting icons from the MUI API, and this CV created entirely in JavaScript. All projects are available on my ",
@@ -387,7 +338,8 @@ function addElement() {
       descr: "Delivered professional support while demonstrating leadership qualities, managing both employees and students to ensure timely and efficient service. This experience enhanced my leadership abilities, improved my English skills, and strengthened my teamwork and workforce management skills, as well as my understanding of what it takes to be an effective leader.",
     });
 
-    // const add = addList();
+
+
 
     const addUl1 = addUlist();
 
@@ -417,6 +369,10 @@ function addElement() {
 
     addUl.style.listStyleType = "none";
 
+
+    const addSB = addSkillsblock();
+
+    rightBlock.appendChild(addSB);
 
   
 
