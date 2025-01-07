@@ -1,0 +1,25 @@
+/* Media only  */
+
+@media (max-width: 768px) {
+
+    #leftlist {
+        width: 100px;
+        background-color: red;
+    }
+
+    .listlBlock {
+        background-color: blue;
+    }
+
+   .bodyMain{
+    flex-direction: column;
+   }
+
+   #leftBlock {
+        width: 10vw;
+        
+   }
+   #rightBlock{
+    width: 80vw;
+   }
+}
